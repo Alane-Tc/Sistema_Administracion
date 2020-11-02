@@ -24,4 +24,4 @@ Sistema de administracion de citas para un consultorio medico
 ------------
 
 ###     Licencia
-Apache License 2.0 Mitzi was here, Rocio was here.
+Apache License 2.0 Mitzi was here, Rocio was here, Jose was here.
