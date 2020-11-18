@@ -1,24 +1,37 @@
 package tecmilenio.alantamez;
 //This is the doctor class
 
+import java.io.File;
+import java.io.FileWriter;
+import java.io.IOException;
+
+
 public class Doctor {
+    private File file;
 
-    //atributes
-    private String nombre_doctor;
-    private int id_doctor;
-    private String contraseña_admin;
+    public void createFile(){
+        file = new File("Doctors.csv");
 
-    //methods
-    private void  Show_Results(){
-        //in here goes the showing results code
+        try {
+            if(file.createNewFile()){
+                System.out.println("El archivo se ha creado");
+            }
+
+        }catch (IOException ex){
+            System.out.println("No se puedo crear el archivo");
+        }
     }
 
-    private void Remove_Results(){
-        //in here goes the remove results code
-    }
-
-    private void Add_results(){
-        //in here goes the add results code
+    public void addDoctor(int id, String nameDoctor, String lastName, int identicacion){
+        try{
+            createFile();
+            FileWriter writeDoctor = new FileWriter(file, true);
+            writeDoctor.write("Id: "+id+" , "+"Nombre: "+ nameDoctor+" , "+"Apellido: "+ lastName+ " , "+"Identicicaion: "+ identicacion);
+            writeDoctor.write("\r\n");
+            writeDoctor.close();
+        }catch (Exception e){
+            System.out.println("Error al escribir ");
+        }
     }
 
 }
