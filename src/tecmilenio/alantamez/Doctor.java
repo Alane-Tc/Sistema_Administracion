@@ -1,9 +1,7 @@
 package tecmilenio.alantamez;
 //This is the doctor class
 
-import java.io.File;
-import java.io.FileWriter;
-import java.io.IOException;
+import java.io.*;
 
 
 public class Doctor {
@@ -31,6 +29,24 @@ public class Doctor {
             writeDoctor.close();
         }catch (Exception e){
             System.out.println("Error al escribir ");
+        }
+    }
+    
+    public void showDoctor(String file){
+        try{
+        String cadena;
+            createFile();
+            FileReader showDoctor = new FileReader(file);
+            BufferedReader buffer = new BufferedReader(showDoctor);
+            while((cadena = buffer.readLine())!=null) {
+                System.out.println(cadena);
+            }
+            buffer.close();
+        } catch (FileNotFoundException e){
+            System.out.println("Archivo no encontrado");
+        } catch (IOException e) {
+            e.printStackTrace();
+            System.out.println("Error");
         }
     }
 

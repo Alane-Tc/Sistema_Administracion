@@ -20,13 +20,9 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="a1216b85-0e6f-4f99-9323-253e16e5e44a" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/Usuarios.csv" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Doctors.csv" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/Sistema_Administracion/tecmilenio/alantamez/Date.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/Sistema_Administracion/tecmilenio/alantamez/Date.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/out/production/Sistema_Administracion/tecmilenio/alantamez/Doctor.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/Sistema_Administracion/tecmilenio/alantamez/Doctor.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/Sistema_Administracion/tecmilenio/alantamez/Main.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/Sistema_Administracion/tecmilenio/alantamez/Main.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/Sistema_Administracion/tecmilenio/alantamez/Menu.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/Sistema_Administracion/tecmilenio/alantamez/Menu.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/Sistema_Administracion/tecmilenio/alantamez/Patient.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/Sistema_Administracion/tecmilenio/alantamez/Patient.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/tecmilenio/alantamez/Doctor.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/tecmilenio/alantamez/Doctor.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/tecmilenio/alantamez/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/tecmilenio/alantamez/Main.java" afterDir="false" />
     </list>
@@ -107,21 +103,21 @@
       <screen x="0" y="0" width="1366" height="738" />
     </state>
     <state x="488" y="75" key="#com.intellij.ide.util.MemberChooser/0.0.1366.738@0.0.1366.738" timestamp="1605566862057" />
-    <state width="1323" height="182" key="GridCell.Tab.0.bottom" timestamp="1605742114929">
+    <state width="1323" height="182" key="GridCell.Tab.0.bottom" timestamp="1605805293043">
       <screen x="0" y="0" width="1366" height="738" />
     </state>
-    <state width="1323" height="182" key="GridCell.Tab.0.bottom/0.0.1366.738@0.0.1366.738" timestamp="1605742114929" />
-    <state width="1323" height="182" key="GridCell.Tab.0.center" timestamp="1605742114929">
+    <state width="1323" height="182" key="GridCell.Tab.0.bottom/0.0.1366.738@0.0.1366.738" timestamp="1605805293043" />
+    <state width="1323" height="182" key="GridCell.Tab.0.center" timestamp="1605805293043">
       <screen x="0" y="0" width="1366" height="738" />
     </state>
-    <state width="1323" height="182" key="GridCell.Tab.0.center/0.0.1366.738@0.0.1366.738" timestamp="1605742114929" />
-    <state width="1323" height="182" key="GridCell.Tab.0.left" timestamp="1605742114929">
+    <state width="1323" height="182" key="GridCell.Tab.0.center/0.0.1366.738@0.0.1366.738" timestamp="1605805293043" />
+    <state width="1323" height="182" key="GridCell.Tab.0.left" timestamp="1605805293043">
       <screen x="0" y="0" width="1366" height="738" />
     </state>
-    <state width="1323" height="182" key="GridCell.Tab.0.left/0.0.1366.738@0.0.1366.738" timestamp="1605742114929" />
-    <state width="1323" height="182" key="GridCell.Tab.0.right" timestamp="1605742114929">
+    <state width="1323" height="182" key="GridCell.Tab.0.left/0.0.1366.738@0.0.1366.738" timestamp="1605805293043" />
+    <state width="1323" height="182" key="GridCell.Tab.0.right" timestamp="1605805293043">
       <screen x="0" y="0" width="1366" height="738" />
     </state>
-    <state width="1323" height="182" key="GridCell.Tab.0.right/0.0.1366.738@0.0.1366.738" timestamp="1605742114929" />
+    <state width="1323" height="182" key="GridCell.Tab.0.right/0.0.1366.738@0.0.1366.738" timestamp="1605805293043" />
   </component>
 </project>
