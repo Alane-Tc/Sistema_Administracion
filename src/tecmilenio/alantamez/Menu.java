@@ -3,13 +3,11 @@ package tecmilenio.alantamez;
 import java.util.Scanner;
 
 public class Menu {
-
-    int alta_doctor =0;
-    int alta_paciente=0;
-
+    private Scanner entrada = new Scanner(System.in);
+    private Doctor doctor = new Doctor();
 
     boolean cicle = true;
-    public void ShowMenu(){
+    private void ShowMenu(){
         System.out.println("\t Bienvenid@ al sistema de administración!" +
                 "\n Selecciona una opción"+"\n 1- Sección Doctores"+
                 "\n 2- Sección pacientes"+ "\n 3- Sección cita"+
@@ -23,15 +21,34 @@ public class Menu {
         return menu;
     }
 
-    public void Show_Switch(int menu) throws Exception {
-
+    private void Show_Switch(int menu) throws Exception {
+        int submenu=0;
         switch (menu){
             case 1:
-                System.out.println("Opcion 1");
-                /*1- Alta doctor
-                * 2- Mostrar resultados
-                * 3- Eliminar doctor
-                */
+                System.out.print("Selecciono doctores");
+                line();
+                showDoctors();
+                System.out.print("Digite que opción quieres de doctores: ");
+                 submenu = entrada.nextInt();
+                if (submenu ==1){
+                    System.out.print("¿Cuál es id del doctor: ");
+                    var idDoctor = entrada.next();
+                    System.out.print("¿Cuál es nombre del doctor: ");
+                    var nameDoctor = entrada.next();
+                    System.out.print("¿Cuál es apellido del doctor: ");
+                    var lastnameDoctor = entrada.next();
+                    System.out.print("¿Cuál es la celula del doctor: ");
+                    var identificationDoctor = entrada.next();
+                   doctor.addDoctor(idDoctor,nameDoctor,lastnameDoctor,identificationDoctor);
+                }else if(submenu == 2){
+                    doctor.showDoctor("hola","mundo");
+                }else if(submenu ==3){
+                    System.out.print("¿Cuál es id del doctor: ");
+                    var idDoctorr = entrada.next();
+                    doctor.deleteDoctor(idDoctorr);
+                }else if(submenu >3){
+                    System.out.println("Opcion no disponible");
+                }
                 break;
 
             case 2:
@@ -72,8 +89,20 @@ public class Menu {
             }
         }while (cicle);
     }
-    void line(){
+    private void line(){
         System.out.println("\n---------------------");
     }
+
+    private void showDoctors(){
+        System.out.print(
+                "\n Selecciona una opción: "+"\n 1- Dar De Alta Doctores"+
+                "\n 2- Mostrar Doctores"+ "\n 3- Eliminar Doctores"+
+                "\n 0- Salir del sistema");
+    }
+
+    private void askInformationDoctor(){
+
+    }
+
 
 }

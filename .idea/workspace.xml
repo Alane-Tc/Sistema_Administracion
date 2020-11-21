@@ -20,11 +20,13 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="a1216b85-0e6f-4f99-9323-253e16e5e44a" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/Doctors.csv" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/out/production/Sistema_Administracion/tecmilenio/alantamez/Doctor.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/Sistema_Administracion/tecmilenio/alantamez/Doctor.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/Sistema_Administracion/tecmilenio/alantamez/Main.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/Sistema_Administracion/tecmilenio/alantamez/Main.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/Sistema_Administracion/tecmilenio/alantamez/Menu.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/Sistema_Administracion/tecmilenio/alantamez/Menu.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/tecmilenio/alantamez/Doctor.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/tecmilenio/alantamez/Doctor.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/tecmilenio/alantamez/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/tecmilenio/alantamez/Main.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/tecmilenio/alantamez/Menu.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/tecmilenio/alantamez/Menu.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -53,7 +55,7 @@
   <component name="PropertiesComponent">
     <property name="ASKED_ADD_EXTERNAL_FILES" value="true" />
     <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/../Contactos" />
   </component>
   <component name="RunManager">
     <configuration name="Main" type="Application" factoryName="Application" temporary="true">
@@ -103,21 +105,25 @@
       <screen x="0" y="0" width="1366" height="738" />
     </state>
     <state x="488" y="75" key="#com.intellij.ide.util.MemberChooser/0.0.1366.738@0.0.1366.738" timestamp="1605566862057" />
-    <state width="1323" height="182" key="GridCell.Tab.0.bottom" timestamp="1605805293043">
+    <state x="463" y="124" key="FileChooserDialogImpl" timestamp="1605913452355">
       <screen x="0" y="0" width="1366" height="738" />
     </state>
-    <state width="1323" height="182" key="GridCell.Tab.0.bottom/0.0.1366.738@0.0.1366.738" timestamp="1605805293043" />
-    <state width="1323" height="182" key="GridCell.Tab.0.center" timestamp="1605805293043">
+    <state x="463" y="124" key="FileChooserDialogImpl/0.0.1366.738@0.0.1366.738" timestamp="1605913452355" />
+    <state width="1323" height="296" key="GridCell.Tab.0.bottom" timestamp="1605995198733">
       <screen x="0" y="0" width="1366" height="738" />
     </state>
-    <state width="1323" height="182" key="GridCell.Tab.0.center/0.0.1366.738@0.0.1366.738" timestamp="1605805293043" />
-    <state width="1323" height="182" key="GridCell.Tab.0.left" timestamp="1605805293043">
+    <state width="1323" height="296" key="GridCell.Tab.0.bottom/0.0.1366.738@0.0.1366.738" timestamp="1605995198733" />
+    <state width="1323" height="296" key="GridCell.Tab.0.center" timestamp="1605995198733">
       <screen x="0" y="0" width="1366" height="738" />
     </state>
-    <state width="1323" height="182" key="GridCell.Tab.0.left/0.0.1366.738@0.0.1366.738" timestamp="1605805293043" />
-    <state width="1323" height="182" key="GridCell.Tab.0.right" timestamp="1605805293043">
+    <state width="1323" height="296" key="GridCell.Tab.0.center/0.0.1366.738@0.0.1366.738" timestamp="1605995198733" />
+    <state width="1323" height="296" key="GridCell.Tab.0.left" timestamp="1605995198733">
       <screen x="0" y="0" width="1366" height="738" />
     </state>
-    <state width="1323" height="182" key="GridCell.Tab.0.right/0.0.1366.738@0.0.1366.738" timestamp="1605805293043" />
+    <state width="1323" height="296" key="GridCell.Tab.0.left/0.0.1366.738@0.0.1366.738" timestamp="1605995198733" />
+    <state width="1323" height="296" key="GridCell.Tab.0.right" timestamp="1605995198733">
+      <screen x="0" y="0" width="1366" height="738" />
+    </state>
+    <state width="1323" height="296" key="GridCell.Tab.0.right/0.0.1366.738@0.0.1366.738" timestamp="1605995198733" />
   </component>
 </project>
