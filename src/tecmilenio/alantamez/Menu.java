@@ -98,13 +98,13 @@ public class Menu {
 
     private void askInformationDoctor(){
         System.out.print("¿Cuál es id del doctor: ");
-        idDoctor = entrada.nextLine();
+        idDoctor = entrada.next();
         System.out.print("¿Cuál es nombre del doctor: ");
-        nameDoctor = entrada.nextLine();
+        nameDoctor = entrada.next();
         System.out.print("¿Cuál es apellido del doctor: ");
-        lastnameDoctor = entrada.nextLine();
+        lastnameDoctor = entrada.next();
         System.out.print("¿Cuál es la celula del doctor: ");
-        identificationDoctor = entrada.nextLine();
+        identificationDoctor = entrada.next();
     }
 
 

@@ -14,7 +14,7 @@ import java.util.HashMap;
 public class Doctor {
     private HashMap<String,String> listDoctors = new HashMap<>();
     private String file = "C:\\Users\\alant\\OneDrive\\Documentos\\Proyectos-Universidad\\Sistema_Administracion\\src\\tecmilenio\\alantamez\\Doctors.csv";
-
+    private String fileMitzi ="C:\\EvidenciaJavaEquipo\\Sistema_Administracion\\src\\tecmilenio\\alantamez\\Doctors.csv";
     public void createFile() throws IOException{
         String separator = FileSystems.getDefault().getSeparator();
         String fileName = String.format("src%stecmilenio%salantamez%sDoctors.csv",separator,separator,separator,separator);
@@ -59,24 +59,23 @@ public class Doctor {
     public void showDoctor(String lastname, String Identification){
         try{
             createFile();
-            FileReader showUsers = new FileReader(file);
+            FileReader showUsers = new FileReader(fileMitzi);
             BufferedReader buffer = new BufferedReader(showUsers);
             if (listDoctors.isEmpty()){
                 System.out.println("Aun no ha registrado doctores");
             }else{
-                for(var user : listDoctors.entrySet()){
+                /*for(var user : listDoctors.entrySet()){
                     System.out.println(String.format("Id: %s, Nombre: %s"+ " , "
-                                    + " Apellido: "+" , "+ " Cedula: ",
-                            user.getKey(),user.getValue()));
+                                    + " Apellido:  "+" , "+ " Cedula:  ",
+                            user.getKey(),user.getValue()));*/
                 }
-            }
             buffer.close();
-        } catch (FileNotFoundException e){
-            System.out.println("Archivo no encontrado");
-        } catch (IOException e) {
-            e.printStackTrace();
-            System.out.println("Error");
+            } catch (FileNotFoundException fileNotFoundException) {
+            fileNotFoundException.printStackTrace();
+        } catch (IOException ioException) {
+            ioException.printStackTrace();
         }
+
     }
 
     public void deleteDoctor(String id) throws IOException {
