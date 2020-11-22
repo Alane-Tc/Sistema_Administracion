@@ -5,7 +5,10 @@ import java.util.Scanner;
 public class Menu {
     private Scanner entrada = new Scanner(System.in);
     private Doctor doctor = new Doctor();
-
+    private String idDoctor;
+    private String nameDoctor;
+    private String lastnameDoctor;
+    private String identificationDoctor;
     boolean cicle = true;
     private void ShowMenu(){
         System.out.println("\t Bienvenid@ al sistema de administración!" +
@@ -31,17 +34,10 @@ public class Menu {
                 System.out.print("Digite que opción quieres de doctores: ");
                  submenu = entrada.nextInt();
                 if (submenu ==1){
-                    System.out.print("¿Cuál es id del doctor: ");
-                    var idDoctor = entrada.next();
-                    System.out.print("¿Cuál es nombre del doctor: ");
-                    var nameDoctor = entrada.next();
-                    System.out.print("¿Cuál es apellido del doctor: ");
-                    var lastnameDoctor = entrada.next();
-                    System.out.print("¿Cuál es la celula del doctor: ");
-                    var identificationDoctor = entrada.next();
+                    askInformationDoctor();
                    doctor.addDoctor(idDoctor,nameDoctor,lastnameDoctor,identificationDoctor);
                 }else if(submenu == 2){
-                    doctor.showDoctor("hola","mundo");
+                    doctor.showDoctor(lastnameDoctor, identificationDoctor);
                 }else if(submenu ==3){
                     System.out.print("¿Cuál es id del doctor: ");
                     var idDoctorr = entrada.next();
@@ -101,7 +97,14 @@ public class Menu {
     }
 
     private void askInformationDoctor(){
-
+        System.out.print("¿Cuál es id del doctor: ");
+        idDoctor = entrada.nextLine();
+        System.out.print("¿Cuál es nombre del doctor: ");
+        nameDoctor = entrada.nextLine();
+        System.out.print("¿Cuál es apellido del doctor: ");
+        lastnameDoctor = entrada.nextLine();
+        System.out.print("¿Cuál es la celula del doctor: ");
+        identificationDoctor = entrada.nextLine();
     }
 
 
