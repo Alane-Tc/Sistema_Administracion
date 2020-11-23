@@ -37,7 +37,7 @@ public class Menu {
                     askInformationDoctor();
                    doctor.addDoctor(idDoctor,nameDoctor,lastnameDoctor,identificationDoctor);
                 }else if(submenu == 2){
-                    doctor.showDoctor(lastnameDoctor, identificationDoctor);
+                    doctor.showDoctor();
                 }else if(submenu ==3){
                     System.out.print("¿Cuál es id del doctor: ");
                     var idDoctorr = entrada.next();

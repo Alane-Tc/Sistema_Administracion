@@ -56,26 +56,29 @@ public class Doctor {
         }
     }
     
-    public void showDoctor(String lastname, String Identification){
-        try{
+    public void showDoctor() throws IOException {
+        try {
+            String cadena;
             createFile();
-            FileReader showUsers = new FileReader(fileMitzi);
+            FileReader showUsers = new FileReader(file);
             BufferedReader buffer = new BufferedReader(showUsers);
-            if (listDoctors.isEmpty()){
+            if (listDoctors.isEmpty()) {
                 System.out.println("Aun no ha registrado doctores");
-            }else{
-                /*for(var user : listDoctors.entrySet()){
-                    System.out.println(String.format("Id: %s, Nombre: %s"+ " , "
-                                    + " Apellido:  "+" , "+ " Cedula:  ",
-                            user.getKey(),user.getValue()));*/
+            } else {
+                /*while ((cadena = buffer.readLine()) != null) {
+                    System.out.println(cadena);
+                }*/
+                for (var user : listDoctors.entrySet()) {
+                    System.out.println(String.format("Id: %s, Nombre: %s" + " , "
+                                    + " Apellido:  " + " , " + " Cedula:  ",
+                            user.getKey(), user.getValue()));
                 }
-            buffer.close();
-            } catch (FileNotFoundException fileNotFoundException) {
-            fileNotFoundException.printStackTrace();
-        } catch (IOException ioException) {
-            ioException.printStackTrace();
-        }
+                buffer.close();
+            }
 
+        }catch (FileNotFoundException e){
+            System.out.println("Archivo no encontrado");
+        }
     }
 
     public void deleteDoctor(String id) throws IOException {

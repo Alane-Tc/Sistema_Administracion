@@ -22,10 +22,10 @@
     <list default="true" id="a1216b85-0e6f-4f99-9323-253e16e5e44a" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/out/production/Sistema_Administracion/tecmilenio/alantamez/Doctor.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/Sistema_Administracion/tecmilenio/alantamez/Doctor.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/Sistema_Administracion/tecmilenio/alantamez/Main.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/Sistema_Administracion/tecmilenio/alantamez/Main.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/Sistema_Administracion/tecmilenio/alantamez/Doctors.csv" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/out/production/Sistema_Administracion/tecmilenio/alantamez/Menu.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/Sistema_Administracion/tecmilenio/alantamez/Menu.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/tecmilenio/alantamez/Doctor.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/tecmilenio/alantamez/Doctor.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/tecmilenio/alantamez/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/tecmilenio/alantamez/Main.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/tecmilenio/alantamez/Doctors.csv" beforeDir="false" afterPath="$PROJECT_DIR$/src/tecmilenio/alantamez/Doctors.csv" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/tecmilenio/alantamez/Menu.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/tecmilenio/alantamez/Menu.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -109,21 +109,21 @@
       <screen x="0" y="0" width="1366" height="738" />
     </state>
     <state x="463" y="124" key="FileChooserDialogImpl/0.0.1366.738@0.0.1366.738" timestamp="1605913452355" />
-    <state width="1323" height="296" key="GridCell.Tab.0.bottom" timestamp="1605995198733">
+    <state width="1323" height="296" key="GridCell.Tab.0.bottom" timestamp="1606108535582">
       <screen x="0" y="0" width="1366" height="738" />
     </state>
-    <state width="1323" height="296" key="GridCell.Tab.0.bottom/0.0.1366.738@0.0.1366.738" timestamp="1605995198733" />
-    <state width="1323" height="296" key="GridCell.Tab.0.center" timestamp="1605995198733">
+    <state width="1323" height="296" key="GridCell.Tab.0.bottom/0.0.1366.738@0.0.1366.738" timestamp="1606108535582" />
+    <state width="1323" height="296" key="GridCell.Tab.0.center" timestamp="1606108535582">
       <screen x="0" y="0" width="1366" height="738" />
     </state>
-    <state width="1323" height="296" key="GridCell.Tab.0.center/0.0.1366.738@0.0.1366.738" timestamp="1605995198733" />
-    <state width="1323" height="296" key="GridCell.Tab.0.left" timestamp="1605995198733">
+    <state width="1323" height="296" key="GridCell.Tab.0.center/0.0.1366.738@0.0.1366.738" timestamp="1606108535582" />
+    <state width="1323" height="296" key="GridCell.Tab.0.left" timestamp="1606108535582">
       <screen x="0" y="0" width="1366" height="738" />
     </state>
-    <state width="1323" height="296" key="GridCell.Tab.0.left/0.0.1366.738@0.0.1366.738" timestamp="1605995198733" />
-    <state width="1323" height="296" key="GridCell.Tab.0.right" timestamp="1605995198733">
+    <state width="1323" height="296" key="GridCell.Tab.0.left/0.0.1366.738@0.0.1366.738" timestamp="1606108535582" />
+    <state width="1323" height="296" key="GridCell.Tab.0.right" timestamp="1606108535582">
       <screen x="0" y="0" width="1366" height="738" />
     </state>
-    <state width="1323" height="296" key="GridCell.Tab.0.right/0.0.1366.738@0.0.1366.738" timestamp="1605995198733" />
+    <state width="1323" height="296" key="GridCell.Tab.0.right/0.0.1366.738@0.0.1366.738" timestamp="1606108535582" />
   </component>
 </project>
