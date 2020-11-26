@@ -2,94 +2,90 @@ package tecmilenio.alantamez;
 //This is the doctor class
 
 import java.io.*;
-
-import java.nio.file.FileSystems;
-import java.nio.file.Files;
-import java.nio.file.Path;
-import java.nio.file.Paths;
-import java.util.ArrayList;
-import java.util.HashMap;
+import java.util.Scanner;
 
 
 public class Doctor {
-    private HashMap<String,String> listDoctors = new HashMap<>();
     private String file = "C:\\Users\\alant\\OneDrive\\Documentos\\Proyectos-Universidad\\Sistema_Administracion\\src\\tecmilenio\\alantamez\\Doctors.csv";
-    private String fileMitzi ="C:\\EvidenciaJavaEquipo\\Sistema_Administracion\\src\\tecmilenio\\alantamez\\Doctors.csv";
-    public void createFile() throws IOException{
-        String separator = FileSystems.getDefault().getSeparator();
-        String fileName = String.format("src%stecmilenio%salantamez%sDoctors.csv",separator,separator,separator,separator);
-        Path path = Paths.get(fileName);
+    private Scanner ent = new Scanner(System.in);
+    private Files filedoctor = new Files();
+    private int ndoctores;
+    private int idDoctor = 0;
+   private String nombreDoctor;
+    private String Apellido;
+    private int cedula = 0;
+    private int submenu =0;
+    private boolean continie = true;
 
-        ArrayList<String> lines = new ArrayList<>();
+  private void NumDoctores(){
+      System.out.print("¿Cuantos doctores desea registrar?: ");
+      ndoctores= ent.nextInt();
+  }
 
-        if(!Files.exists(path)){
-            File file = new File(String.valueOf(path));
-            file.createNewFile();
-        }
-        lines = (ArrayList<String>) Files.readAllLines(path);
-        for (var users : lines){
-            var infoContact = users.split(",");
-            listDoctors.put(infoContact[0].trim(),infoContact[1].trim());
-        }
+  private void datosDoctores(){
+
+          System.out.print("¿Cuál es el id?: ");
+          idDoctor = ent.nextInt();
+          System.out.print("¿Cuál es el nombre del doctor: ");
+          nombreDoctor = ent.next();
+          System.out.print("¿Cuál es el apellido del doctor: ");
+          Apellido = ent.next();
+          System.out.print("¿Cuál es el cedula: ");
+          cedula = ent.nextInt();
+
+  }
+
+  private void opcionDoctor(){
+      System.out.println(
+              "\n Selecciona una opción"+"\n 1- Alta Doctores"+
+              "\n 2- Mostrar Doctores"+ "\n 3- Baja Doctores");
+  }
+
+    public void altaDoctor(){
+      do{
+          opcionDoctor();
+          System.out.print("Digite que opción quieres de doctores: ");
+          submenu = ent.nextInt();
+          if (submenu ==1){
+              NumDoctores();
+              filedoctor.createFileDoctor();
+              Object [][] listDoctor = new Object[ndoctores][1];
+              for (int i=0; i< ndoctores; i++){
+                  datosDoctores();
+                  lineaDiv();
+                  for (int j=0; j< listDoctor[i].length; j++){
+                      listDoctor[i][j]= idDoctor +","+nombreDoctor +","+Apellido +","+cedula;
+                  }
+                  try{
+                      FileWriter writeDoctor = new FileWriter(file, true);
+                      writeDoctor.write("Id: "+idDoctor+" , "+"Nombre: "+ nombreDoctor+" , "+"Apellido: "+ Apellido+ " , "+"Cedula: "+ cedula);
+                      writeDoctor.write("\r\n");
+                      writeDoctor.close();
+                  }catch (Exception e){
+                      System.out.println("Error al escribir ");
+                  }
+              }
+              System.out.println("Datos Registrados");
+              for (int a=0; a< ndoctores; a++){
+                  for (int j=0; j< listDoctor[a].length; j++){
+                      System.out.print(listDoctor[a][j]+ " ");
+                  }
+                  System.out.println("\n");
+              }
+          }else if(submenu == 2){
+            filedoctor.showDoctor(file);
+          }else if(submenu ==3){
+            filedoctor.deteleDoctor();
+          }else if(submenu >3){
+              System.out.println("Opcion no disponible");
+              continie = false;
+          }
+          
+      }while (continie);
 
     }
-
-    public void save() throws IOException {
-        String separator = FileSystems.getDefault().getSeparator();
-        String fileName = String.format("src%stecmilenio%salantamez%sDoctors.csv",separator,separator,separator,separator);
-        Path path = Paths.get(fileName);
-        ArrayList<String> saveContacts = new ArrayList<>();
-        for (var users : listDoctors.entrySet()){
-            saveContacts.add(users.getKey()+", "+ users.getValue());
-        }
-        Files.write(path,saveContacts);
-    }
-
-    public void addDoctor(String id, String nameDoctor, String lastName, String identicacion) throws IOException {
-        if (listDoctors.containsKey(id)){
-            System.out.println("El Id del doctor ya existe");
-        }else {
-            listDoctors.put(id.trim(),nameDoctor.trim()+" , "+ lastName+ ", " + identicacion);
-            save();
-            createFile();
-            System.out.println("Doctor registrado Correctamente");
-        }
-    }
-    
-    public void showDoctor() throws IOException {
-        try {
-            String cadena;
-            createFile();
-            FileReader showUsers = new FileReader(file);
-            BufferedReader buffer = new BufferedReader(showUsers);
-            if (listDoctors.isEmpty()) {
-                System.out.println("Aun no ha registrado doctores");
-            } else {
-                /*while ((cadena = buffer.readLine()) != null) {
-                    System.out.println(cadena);
-                }*/
-                for (var user : listDoctors.entrySet()) {
-                    System.out.println(String.format("Id: %s, Nombre: %s" + " , "
-                                    + " Apellido:  " + " , " + " Cedula:  ",
-                            user.getKey(), user.getValue()));
-                }
-                buffer.close();
-            }
-
-        }catch (FileNotFoundException e){
-            System.out.println("Archivo no encontrado");
-        }
-    }
-
-    public void deleteDoctor(String id) throws IOException {
-        if (listDoctors.containsKey(id)){
-            System.out.println("No existe registro de este doctor");
-        }else{
-            var p = listDoctors.remove(id);
-            save();
-            createFile();
-            System.out.println("Doctor Eliminado");
-        }
+    private void lineaDiv(){
+        System.out.println("---------------------------------------------------");
     }
 
 }
