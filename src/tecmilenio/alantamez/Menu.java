@@ -10,7 +10,7 @@ public class Menu {
     private String lastnameDoctor;
     private String identificationDoctor;*/
     boolean cicle = true;
-    Doctor doctorClass = new Doctor();
+   private Doctor doctorClass = new Doctor();
     private void ShowMenu(){
         System.out.println("\t Bienvenid@ al sistema de administración!" +
                 "\n Selecciona una opción"+"\n 1- Sección Doctores"+
@@ -30,6 +30,7 @@ public class Menu {
         switch (menu){
             case 1:
                 System.out.print("Selecciono doctores");
+                lineTwo();
                 doctorClass.altaDoctor();
                 break;
 
@@ -73,6 +74,9 @@ public class Menu {
     }
     private void line(){
         System.out.println("\n---------------------");
+    }
+    private void lineTwo(){
+        System.out.print("\n---------------------");
     }
 
     private void showDoctors(){
