@@ -11,12 +11,12 @@ public class Doctor {
     private Files filedoctor = new Files();
     private int ndoctores;
     private int idDoctor = 0;
-   private String nombreDoctor;
+     private String nombreDoctor;
     private String Apellido;
     private int cedula = 0;
     private int submenu =0;
     private boolean continie = true;
-    private String fileName = "src//tecmilenio//alantamez//Doctors.csv";
+    private String fileName = "user.home//Doctors.csv";
 
   private void NumDoctores(){
       System.out.print("¿Cuantos doctores desea registrar?: ");
@@ -42,14 +42,14 @@ public class Doctor {
               "\n 2- Mostrar Doctores"+ "\n 3- Baja Doctores");
   }
 
-    public void altaDoctor(){
+    public void altaDoctor() throws Exception {
       do{
           opcionDoctor();
           System.out.print("Digite que opción quieres de doctores: ");
           submenu = ent.nextInt();
           if (submenu ==1){
               NumDoctores();
-              filedoctor.createFileDoctor();
+              filedoctor.FileManager();
               Object [][] listDoctor = new Object[ndoctores][1];
               for (int i=0; i< ndoctores; i++){
                   datosDoctores();
@@ -58,7 +58,7 @@ public class Doctor {
                       listDoctor[i][j]= idDoctor +","+nombreDoctor +","+Apellido +","+cedula;
                   }
                   try{
-                      FileWriter writeDoctor = new FileWriter(fileName, true);
+                      FileWriter writeDoctor = new FileWriter("Doctors.csv", true);
                       writeDoctor.write("Id: "+idDoctor+" , "+"Nombre: "+ nombreDoctor+" , "+"Apellido: "+ Apellido+ " , "+"Cedula: "+ cedula);
                       writeDoctor.write("\r\n");
                       writeDoctor.close();

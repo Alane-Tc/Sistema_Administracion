@@ -8,8 +8,26 @@ import java.util.ArrayList;
 
 public class Files {
     private String fileDoctor = "C:\\Users\\alant\\OneDrive\\Documentos\\Proyectos-Universidad\\Sistema_Administracion\\src\\tecmilenio\\alantamez\\Doctors.csv";
+    private static final String HOME_PATH = System.getProperty("user.home");
+    private static final String FILENAME = "contacts.csv";
 
-    public void createFileDoctor(){
+    public void FileManager() throws Exception {
+        var separator = FileSystems.getDefault().getSeparator();
+        var filepath = String.format("%s%s%s", HOME_PATH, separator, FILENAME);
+       Path fileLocation = Paths.get(filepath);
+
+        if(!java.nio.file.Files.exists(fileLocation)){
+            File file = new File(String.valueOf(fileLocation));
+            try {
+                file.createNewFile();
+            } catch (IOException e) {
+                System.out.println("Error"+ e);
+            }
+        }
+    }
+
+
+   /* public void createFileDoctor(){
         String separator = FileSystems.getDefault().getSeparator();
         String fileName = String.format("src%stecmilenio%salantamez%sDoctors.csv",separator,separator,separator,separator);
         Path path = Paths.get(fileName);
@@ -24,12 +42,12 @@ public class Files {
                 System.out.println("Error"+ e);
             }
         }
-    }
+    }*/
 
-    public void showDoctor(String file){
+    public void showDoctor(String file) throws Exception {
         try{
             String cadena;
-            createFileDoctor();
+            FileManager();
             FileReader showDoctor = new FileReader(file);
             BufferedReader buffer = new BufferedReader(showDoctor);
             while((cadena = buffer.readLine())!=null) {
