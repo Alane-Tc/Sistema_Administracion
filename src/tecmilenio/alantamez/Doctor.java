@@ -16,6 +16,7 @@ public class Doctor {
     private int cedula = 0;
     private int submenu =0;
     private boolean continie = true;
+    private String fileName = "src//tecmilenio//alantamez//Doctors.csv";
 
   private void NumDoctores(){
       System.out.print("¿Cuantos doctores desea registrar?: ");
@@ -57,7 +58,7 @@ public class Doctor {
                       listDoctor[i][j]= idDoctor +","+nombreDoctor +","+Apellido +","+cedula;
                   }
                   try{
-                      FileWriter writeDoctor = new FileWriter(file, true);
+                      FileWriter writeDoctor = new FileWriter(fileName, true);
                       writeDoctor.write("Id: "+idDoctor+" , "+"Nombre: "+ nombreDoctor+" , "+"Apellido: "+ Apellido+ " , "+"Cedula: "+ cedula);
                       writeDoctor.write("\r\n");
                       writeDoctor.close();
