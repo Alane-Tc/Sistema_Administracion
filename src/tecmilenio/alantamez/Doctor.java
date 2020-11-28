@@ -2,25 +2,27 @@ package tecmilenio.alantamez;
 //This is the doctor class
 
 import java.io.*;
+import java.util.ArrayList;
+import java.util.List;
 import java.util.Scanner;
 
 
 public class Doctor {
-    private String file = "C:\\Users\\alant\\OneDrive\\Documentos\\Proyectos-Universidad\\Sistema_Administracion\\src\\tecmilenio\\alantamez\\Doctors.csv";
+    List<ShowDoctors> Doctores = new ArrayList<ShowDoctors>();
     private Scanner ent = new Scanner(System.in);
     private Files filedoctor = new Files();
     private int ndoctores;
     private int idDoctor = 0;
      private String nombreDoctor;
     private String Apellido;
-    private int cedula = 0;
+    private String Especialidad;
     private int submenu =0;
     private boolean continie = true;
-    private String fileName = "user.home//Doctors.csv";
 
   private void NumDoctores(){
       System.out.print("¿Cuantos doctores desea registrar?: ");
       ndoctores= ent.nextInt();
+
   }
 
   private void datosDoctores(){
@@ -31,8 +33,8 @@ public class Doctor {
           nombreDoctor = ent.next();
           System.out.print("¿Cuál es el apellido del doctor: ");
           Apellido = ent.next();
-          System.out.print("¿Cuál es el cedula: ");
-          cedula = ent.nextInt();
+          System.out.print("¿Cuál es el Especialidad: ");
+          Especialidad = ent.next();
 
   }
 
@@ -55,16 +57,17 @@ public class Doctor {
                   datosDoctores();
                   lineaDiv();
                   for (int j=0; j< listDoctor[i].length; j++){
-                      listDoctor[i][j]= idDoctor +","+nombreDoctor +","+Apellido +","+cedula;
+                      listDoctor[i][j]= idDoctor +","+nombreDoctor +","+Apellido +","+ Especialidad;
                   }
-                  try{
-                      FileWriter writeDoctor = new FileWriter("Doctors.csv", true);
+                  filedoctor.escribirDatosDoctor(idDoctor, nombreDoctor, Apellido, Especialidad);
+                  /*try{
+                      FileWriter writeDoctor = new FileWriter(file);
                       writeDoctor.write("Id: "+idDoctor+" , "+"Nombre: "+ nombreDoctor+" , "+"Apellido: "+ Apellido+ " , "+"Cedula: "+ cedula);
                       writeDoctor.write("\r\n");
                       writeDoctor.close();
                   }catch (Exception e){
-                      System.out.println("Error al escribir ");
-                  }
+                      System.out.println("Error al escribir "+ e);
+                  }*/
               }
               System.out.println("Datos Registrados");
               for (int a=0; a< ndoctores; a++){
@@ -74,7 +77,7 @@ public class Doctor {
                   System.out.println("\n");
               }
           }else if(submenu == 2){
-            filedoctor.showDoctor(file);
+            showDoctor();
           }else if(submenu ==3){
             filedoctor.deteleDoctor();
           }else if(submenu >3){
@@ -89,4 +92,14 @@ public class Doctor {
         System.out.println("---------------------------------------------------");
     }
 
+    private void showDoctor(){
+        Doctores.add(new ShowDoctors(idDoctor, nombreDoctor, Apellido,Especialidad ));
+        for(Ssho user : us) {
+            System.out.println(user.getNOMBRE() + " , "
+                    + user.getTELEFONO() + " , "
+                    +user.getCORREO() + " , "
+                    +user.getESPECIALIDAD() + " , "
+                    +user.getCEDULA());
+
+        }
 }

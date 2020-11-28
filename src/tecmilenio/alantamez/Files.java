@@ -1,19 +1,22 @@
 package tecmilenio.alantamez;
 
 import java.io.*;
+import java.nio.charset.Charset;
 import java.nio.file.FileSystems;
 import java.nio.file.Path;
 import java.nio.file.Paths;
 import java.util.ArrayList;
+import java.util.List;
 
 public class Files {
-    private String fileDoctor = "C:\\Users\\alant\\OneDrive\\Documentos\\Proyectos-Universidad\\Sistema_Administracion\\src\\tecmilenio\\alantamez\\Doctors.csv";
     private static final String HOME_PATH = System.getProperty("user.home");
-    private static final String FILENAME = "contacts.csv";
+    private static final String FILENAMEDOCTOR = "Doctors.csv";
+
+    List<ShowDoctors> Doctores = new ArrayList<ShowDoctors>();
 
     public void FileManager() throws Exception {
         var separator = FileSystems.getDefault().getSeparator();
-        var filepath = String.format("%s%s%s", HOME_PATH, separator, FILENAME);
+        var filepath = String.format("%s%s%s", HOME_PATH, separator, FILENAMEDOCTOR);
        Path fileLocation = Paths.get(filepath);
 
         if(!java.nio.file.Files.exists(fileLocation)){
@@ -24,8 +27,23 @@ public class Files {
                 System.out.println("Error"+ e);
             }
         }
+
+
     }
 
+    public void escribirDatosDoctor(int idDoctor, String nombreDoctor, String Apellido, String Especialidad){
+        var separator = FileSystems.getDefault().getSeparator();
+        var filepath = String.format("%s%s%s", HOME_PATH, separator, FILENAMEDOCTOR);
+        Path fileLocation = Paths.get(filepath);
+        try{
+            FileWriter writeDoctor = new FileWriter(filepath, true);
+            writeDoctor.write("Id: "+idDoctor+" , "+"Nombre: "+ nombreDoctor+" , "+"Apellido: "+ Apellido+ " , "+"Cedula: "+ Especialidad);
+            writeDoctor.write("\r\n");
+            writeDoctor.close();
+        }catch (Exception e){
+            System.out.println("Error al escribir "+ e);
+        }
+    }
 
    /* public void createFileDoctor(){
         String separator = FileSystems.getDefault().getSeparator();
@@ -44,33 +62,9 @@ public class Files {
         }
     }*/
 
-    public void showDoctor(String file) throws Exception {
-        try{
-            String cadena;
-            FileManager();
-            FileReader showDoctor = new FileReader(file);
-            BufferedReader buffer = new BufferedReader(showDoctor);
-            while((cadena = buffer.readLine())!=null) {
-                System.out.println(cadena);
-            }
-            buffer.close();
-        } catch (FileNotFoundException e){
-            System.out.println("Archivo no encontrado");
-        } catch (IOException e) {
-            e.printStackTrace();
-            System.out.println("Error");
-        }
-    }
+
 
     public void deteleDoctor(){
-         File fichero = new File(fileDoctor);
-            if(!fichero.exists()){
-                System.out.println("El archivo no existe");
-            }else{
-                fichero.delete();
-                System.out.println("El archivo fue eliminado");
-            }
+
     }
-
-
 }
