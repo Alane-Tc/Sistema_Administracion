@@ -5,12 +5,9 @@ import java.util.Scanner;
 public class Menu {
     private Scanner entrada = new Scanner(System.in);
     private Doctor doctor = new Doctor();
-   /* private String idDoctor;
-    private String nameDoctor;
-    private String lastnameDoctor;
-    private String identificationDoctor;*/
     boolean cicle = true;
    private Doctor doctorClass = new Doctor();
+   private Patient patientClass = new Patient();
     private void ShowMenu(){
         System.out.println("\t Bienvenid@ al sistema de administración!" +
                 "\n Selecciona una opción"+"\n 1- Sección Doctores"+
@@ -35,11 +32,9 @@ public class Menu {
                 break;
 
             case 2:
-                System.out.println("Opcion 2");
-                /*1- Alta pacientes
-                 * 2- Mostrar resultados
-                 * 3- Eliminar pacientes
-                 * 4- Actualizar paciente*/
+                System.out.println("Selecciono Pacientes");
+                lineTwo();
+                patientClass.altaPaciente();
                 break;
 
             case 3:

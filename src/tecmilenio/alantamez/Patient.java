@@ -38,10 +38,10 @@ public class Patient {
                         "\n 2- Baja Pacientes");
     }
 
-    public void altaDoctor() throws Exception {
+    public void altaPaciente() throws Exception {
         do {
             opcionPacientes();
-            System.out.print("Digite que opción quieres de doctores: ");
+            System.out.print("Digite que opción quieres de pacientes: ");
             submenu = ent.nextInt();
             if (submenu == 1) {
                 NumPacientes();
@@ -63,7 +63,7 @@ public class Patient {
                     System.out.println("\n");
                 }
             }  else if (submenu == 2) {
-                filePaciente.eliminarDoctores();
+                filePaciente.eliminarPacientes();
             } else if (submenu > 2) {
                 System.out.println("Opcion no disponible");
                 continie = false;
