@@ -20,9 +20,7 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="a1216b85-0e6f-4f99-9323-253e16e5e44a" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/tecmilenio/alantamez/Menu.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/tecmilenio/alantamez/Menu.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/tecmilenio/alantamez/Patient.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/tecmilenio/alantamez/Patient.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/tecmilenio/alantamez/Date.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/tecmilenio/alantamez/Date.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -52,7 +50,7 @@
     <property name="ASKED_ADD_EXTERNAL_FILES" value="true" />
     <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
     <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/../AddressBook" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
   </component>
   <component name="RunManager">
     <configuration name="Main" type="Application" factoryName="Application" temporary="true">

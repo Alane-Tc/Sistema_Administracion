@@ -9,17 +9,24 @@ public class Date {
     private String Date;
     private String Time;
     private String Reason_date;
+    private int ncitas;
+    private int submenu = 0;
+    private boolean continie = true;
+    Files fileDate = new Files();
 
-    public void ShowDate () {
+    public void NumCitas () {
 
     }
 
-    public void AddDate () {
+    public void datosCitas () {
 
     }
 
-    public void RemoveDate () {
+    public void opcionCitas () {
 
+    }
+
+    public void altaCita(){
 
     }
 
