@@ -23,11 +23,11 @@ public class Patient {
 
         System.out.print("¿Cuál es el id?: ");
         id_Patient = ent.nextInt();
-        System.out.print("¿Cuál es el nombre del Paciente: ");
+        System.out.print("¿Cuál es el nombre del Paciente?: ");
         patient_Name = ent.next();
-        System.out.print("¿Cuál es el apellido del Paciente ");
+        System.out.print("¿Cuál es el apellido del Paciente?: ");
         lastName = ent.next();
-        System.out.print("¿Cuál es la edad del paciente: ");
+        System.out.print("¿Cuál es la edad del paciente?: ");
         age = ent.nextInt();
 
     }
