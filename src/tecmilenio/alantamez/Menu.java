@@ -8,6 +8,7 @@ public class Menu {
     boolean cicle = true;
    private Doctor doctorClass = new Doctor();
    private Patient patientClass = new Patient();
+   private Date dateClass = new Date();
     private void ShowMenu(){
         System.out.println("\t Bienvenid@ al sistema de administración!" +
                 "\n Selecciona una opción"+"\n 1- Sección Doctores"+
@@ -38,13 +39,11 @@ public class Menu {
                 break;
 
             case 3:
-                System.out.println("Opcion 3");
-                /*1- Alta cita
-                 * 2- Mostrar resultados
-                 * 3- Eliminar cita
-                 */
+                System.out.println("Selecciono Citas");
+                lineTwo();
+                dateClass.altaCita();
                 break;
-
+                
             case 0:
                 System.out.println("Gracias Por Visitar el sistema");
                 cicle = false;
