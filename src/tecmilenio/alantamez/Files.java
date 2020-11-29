@@ -54,6 +54,7 @@ public class Files {
         }
     }
 
+    /******************************PACIENTES***************************************************************/
     public void FileManagerPacientes() throws Exception {
         var separator = FileSystems.getDefault().getSeparator();
         var filepath = String.format("%s%s%s", HOME_PATH, separator, FILENAMEPATIENT);
@@ -69,7 +70,33 @@ public class Files {
 
     }
 
-    
+    public void escribirDatosPaciente(int idPaciente, String nombrePaciente, String Apellido, int Edad){
+        var separator = FileSystems.getDefault().getSeparator();
+        var filepath = String.format("%s%s%s", HOME_PATH, separator, FILENAMEPATIENT);
+        Path fileLocation = Paths.get(filepath);
+        try{
+            FileWriter writePaciente = new FileWriter(filepath, true);
+            writePaciente.write("Id: "+idPaciente+" , "+"Nombre: "+ nombrePaciente+" , "+"Apellido: "+ Apellido+ " , "+"Edad: "+ Edad);
+            writePaciente.write("\r\n");
+            writePaciente.close();
+        }catch (Exception e){
+            System.out.println("Error al escribir "+ e);
+        }
+    }
+
+    public void eliminarPacientes(){
+        var separator = FileSystems.getDefault().getSeparator();
+        var filepath = String.format("%s%s%s", HOME_PATH, separator, FILENAMEPATIENT);
+        File fichero = new File(filepath);
+        if (!fichero.exists()) {
+            System.out.println("El archivo data no existe.");
+        } else {
+            fichero.delete();
+            System.out.println("El archivo data fue eliminado.");
+        }
+    }
+
+
 
 
 }
