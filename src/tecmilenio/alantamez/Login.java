@@ -4,11 +4,11 @@ package tecmilenio.alantamez;
 import java.util.Scanner;
 
 public class Login {
-Menu menu = new Menu();
-    String user;
-    String password;
+    private Menu menu = new Menu();
+    private String user;
+    private String password;
 
-    public String askLogin(){
+    private String askLogin(){
         Scanner ent = new Scanner(System.in);
         System.out.print("Digite su usuario: ");
         user=ent.nextLine();
@@ -20,12 +20,13 @@ Menu menu = new Menu();
     public void login() throws Exception {
         askLogin();
         if (user.equals("Admin") && password.equals("Admin123")){
-            /*Aqui llamaremos a una funcion de la clase menu*/
             menu.Option_Message();
         }else{
             System.out.println("Contraseña o usuario incorrecto");
             askLogin();
+            if (user.equals("Admin")&& password.equals("Admin123")){
+                menu.Option_Message();
+            }
         }
     }
-
 }
