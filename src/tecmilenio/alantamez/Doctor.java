@@ -7,7 +7,6 @@ import java.util.Scanner;
 
 
 public class Doctor {
-    List<UsersDoctors> Doctores = new ArrayList<UsersDoctors>();
     private Scanner ent = new Scanner(System.in);
     private Files filedoctor = new Files();
     private int ndoctores;
@@ -40,7 +39,7 @@ public class Doctor {
     private void opcionDoctor() {
         System.out.println(
                 "\n Selecciona una opción" + "\n 1- Alta Doctores" +
-                        "\n 2- Mostrar Doctores" + "\n 3- Baja Doctores");
+                        "\n 2- Baja Doctores");
     }
 
     public void altaDoctor() throws Exception {
@@ -67,11 +66,9 @@ public class Doctor {
                     }
                     System.out.println("\n");
                 }
-            } else if (submenu == 2) {
-                showDoctor();
-            } else if (submenu == 3) {
-
-            } else if (submenu > 3) {
+            }  else if (submenu == 2) {
+                    filedoctor.eliminarDoctores();
+            } else if (submenu > 2) {
                 System.out.println("Opcion no disponible");
                 continie = false;
             }
@@ -84,18 +81,4 @@ public class Doctor {
         System.out.println("---------------------------------------------------");
     }
 
-    private void showDoctor() {
-        if (Doctores.isEmpty()){
-            System.out.println("No hay doctores registrados");
-        }else {
-            Doctores.add(new UsersDoctors(idDoctor, nombreDoctor, Apellido, Especialidad));
-            for (UsersDoctors user : Doctores) {
-                System.out.println(user.getIdDoctor() + " , "
-                        + user.getNombreDoctor() + " , "
-                        + user.getApellido() + " , "
-                        + user.getEspecialidad() + " , ");
-            }
-        }
-
-    }
 }

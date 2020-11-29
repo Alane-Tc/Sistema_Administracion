@@ -79,23 +79,5 @@ public class Menu {
         System.out.print("\n---------------------");
     }
 
-    private void showDoctors(){
-        System.out.print(
-                "\n Selecciona una opción: "+"\n 1- Dar De Alta Doctores"+
-                "\n 2- Mostrar Doctores"+ "\n 3- Eliminar Doctores"+
-                "\n 0- Salir del sistema");
-    }
-
-   /* private void askInformationDoctor(){
-        System.out.print("¿Cuál es id del doctor: ");
-        idDoctor = entrada.next();
-        System.out.print("¿Cuál es nombre del doctor: ");
-        nameDoctor = entrada.next();
-        System.out.print("¿Cuál es apellido del doctor: ");
-        lastnameDoctor = entrada.next();
-        System.out.print("¿Cuál es la celula del doctor: ");
-        identificationDoctor = entrada.next();
-    }*/
-
 
 }
