@@ -27,7 +27,7 @@ public class Patient {
         patient_Name = ent.next();
         System.out.print("¿Cuál es el apellido del Paciente?: ");
         lastName = ent.next();
-        System.out.print("¿Cuál es la edad del paciente?: ");
+        System.out.print("¿Cuál es la edad del Paciente?: ");
         age = ent.nextInt();
 
     }
@@ -41,7 +41,7 @@ public class Patient {
     public void altaPaciente() throws Exception {
         do {
             opcionPacientes();
-            System.out.print("Digite que opción quieres de pacientes: ");
+            System.out.print("Digite que opción quieres de Pacientes: ");
             submenu = ent.nextInt();
             if (submenu == 1) {
                 NumPacientes();

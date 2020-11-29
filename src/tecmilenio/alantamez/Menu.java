@@ -10,9 +10,9 @@ public class Menu {
    private Patient patientClass = new Patient();
    private Date dateClass = new Date();
     private void ShowMenu(){
-        System.out.println("\t Bienvenid@ al sistema de administración!" +
+        System.out.println("\t Bienvenid@ al Sistema de Administración!" +
                 "\n Selecciona una opción"+"\n 1- Sección Doctores"+
-                "\n 2- Sección pacientes"+ "\n 3- Sección cita"+
+                "\n 2- Sección Pacientes"+ "\n 3- Sección Cita"+
                 "\n 0- Salir del sistema");
     }
 
@@ -27,7 +27,7 @@ public class Menu {
         int submenu=0;
         switch (menu){
             case 1:
-                System.out.print("Selecciono doctores");
+                System.out.print("Selecciono Doctores");
                 lineTwo();
                 doctorClass.altaDoctor();
                 break;

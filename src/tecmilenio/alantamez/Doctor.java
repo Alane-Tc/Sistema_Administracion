@@ -27,11 +27,11 @@ public class Doctor {
 
         System.out.print("¿Cuál es el id?: ");
         idDoctor = ent.nextInt();
-        System.out.print("¿Cuál es el nombre del doctor: ");
+        System.out.print("¿Cuál es el nombre del Doctor?: ");
         nombreDoctor = ent.next();
-        System.out.print("¿Cuál es el apellido del doctor: ");
+        System.out.print("¿Cuál es el apellido del Doctor?: ");
         Apellido = ent.next();
-        System.out.print("¿Cuál es el Especialidad: ");
+        System.out.print("¿Cuál es el Especialidad?: ");
         Especialidad = ent.next();
 
     }
@@ -45,7 +45,7 @@ public class Doctor {
     public void altaDoctor() throws Exception {
         do {
             opcionDoctor();
-            System.out.print("Digite que opción quieres de doctores: ");
+            System.out.print("Digite que opción quieres de Doctores: ");
             submenu = ent.nextInt();
             if (submenu == 1) {
                 NumDoctores();

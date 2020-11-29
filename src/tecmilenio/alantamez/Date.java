@@ -18,18 +18,18 @@ public class Date {
     Files fileDate = new Files();
 
     public void NumCitas () {
-        System.out.print("¿Cuantos citas desea registrar?: ");
+        System.out.print("¿Cuantos Citas desea registrar?: ");
         ncitas = ent.nextInt();
     }
 
     public void datosCitas () {
-        System.out.print("¿Cuál es el id de la cita?: ");
+        System.out.print("¿Cuál es el id de la Cita?: ");
         id_date = ent.nextInt();
-        System.out.print("¿Cuál es la fecha de la cita?: ");
+        System.out.print("¿Cuál es la fecha de la Cita?: ");
         Date = ent.next();
-        System.out.print("¿A que hora es la cita?: ");
+        System.out.print("¿A que hora es la Cita?: ");
         Time = ent.next();
-        System.out.print("¿Cuál es el motivo de la cita?: ");
+        System.out.print("¿Cuál es el motivo de la Cita?: ");
         Reason_date = ent.next();
     }
 
