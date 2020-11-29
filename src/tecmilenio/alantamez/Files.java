@@ -182,10 +182,11 @@ public class Files {
             archivo = new File (filepath);
             fr = new FileReader (archivo);
             br = new BufferedReader(fr);
-
             String linea;
             while((linea=br.readLine())!=null)
                 System.out.println(linea);
+        }catch (FileNotFoundException e){
+            System.out.println("Error al visualizar el archivo Cita");
         }
         catch(Exception e){
             e.printStackTrace();
