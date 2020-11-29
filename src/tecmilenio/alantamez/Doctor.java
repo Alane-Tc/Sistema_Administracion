@@ -38,8 +38,7 @@ public class Doctor {
 
     private void opcionDoctor() {
         System.out.println(
-                "\n Selecciona una opción" + "\n 1- Alta Doctores" +
-                        "\n 2- Baja Doctores");
+                "\n Selecciona una opción" + "\n 1- Alta Doctores" + "\n 2- Mostrar Doctores"+ "\n 3- Baja Doctores");
     }
 
     public void altaDoctor() throws Exception {
@@ -66,10 +65,12 @@ public class Doctor {
                     }
                     System.out.println("\n");
                 }
-            }  else if (submenu == 2) {
-                    filedoctor.eliminarDoctores();
-            } else if (submenu > 2) {
-                System.out.println("Opcion no disponible");
+            } else if (submenu ==2){
+                filedoctor.mostrarDoctores();
+            }else if (submenu ==3){
+                filedoctor.eliminarDoctores();
+            }else if (submenu >3 || submenu <=0) {
+                System.out.println("Opcion No Valida");
                 continie = false;
             }
 
