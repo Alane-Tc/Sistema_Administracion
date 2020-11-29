@@ -39,8 +39,42 @@ public class Date {
                         "\n 2-MostrarCitas"+ "\n 3- Baja Cita");
     }
 
-    public void altaCita(){
-
+    public void altaCita() throws Exception {
+        do {
+            opcionCitas();
+            System.out.print("Digite que opción quieres de citas: ");
+            submenu = ent.nextInt();
+            if (submenu == 1) {
+                NumCitas();
+                fileDate.FileManagerCitas();
+                Object[][] listDoctor = new Object[ncitas][1];
+                for (int i = 0; i < ncitas; i++) {
+                    datosCitas();
+                    lineaDiv();
+                    for (int j = 0; j < listDoctor[i].length; j++) {
+                        listDoctor[i][j] = id_date + "," + Date + "," + Time + "," + Reason_date;
+                    }
+                    fileDate.escribirDatosCitas(id_date,Date, Time, Reason_date);
+                }
+                System.out.println("Datos Registrados");
+                for (int a = 0; a < ncitas; a++) {
+                    for (int j = 0; j < listDoctor[a].length; j++) {
+                        System.out.print(listDoctor[a][j] + " ");
+                    }
+                    System.out.println("\n");
+                }
+            }  else if (submenu == 2) {
+                fileDate.verArchivoCitas();
+            }else if(submenu ==3){
+                fileDate.eliminarCitas();
+            } else if (submenu > 3) {
+                System.out.println("Opcion no disponible");
+                continie = false;
+            }
+        } while (continie);
     }
-
+    private void lineaDiv() {
+        System.out.println("---------------------------------------------------");
+    }
 }
+
