@@ -33,9 +33,7 @@ public class Patient {
     }
 
     private void opcionPacientes() {
-        System.out.println(
-                "\n Selecciona una opción" + "\n 1- Alta Pacientes" +
-                        "\n 2- Baja Pacientes");
+        System.out.println("\n Selecciona una opción" + "\n 1- Alta Pacientes" + "\n 2- Mostrar Pacientes"+ "\n 3- Baja Pacientes");
     }
 
     public void altaPaciente() throws Exception {
@@ -62,15 +60,15 @@ public class Patient {
                     }
                     System.out.println("\n");
                 }
-            }  else if (submenu == 2) {
+            } else if (submenu == 2) {
+                filePaciente.mostrarPacientes();
+            }else if (submenu ==3){
                 filePaciente.eliminarPacientes();
-            } else if (submenu > 2) {
+            } else if (submenu > 3 || submenu <= 0) {
                 System.out.println("Opcion no disponible");
                 continie = false;
             }
-
         } while (continie);
-
     }
 
     private void lineaDiv() {

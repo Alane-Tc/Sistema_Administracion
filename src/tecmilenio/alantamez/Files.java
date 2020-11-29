@@ -129,6 +129,37 @@ public class Files {
             System.out.println("El archivo data fue eliminado.");
         }
     }
+
+    public void mostrarPacientes(){
+        var separator = FileSystems.getDefault().getSeparator();
+        var filepath = String.format("%s%s%s", HOME_PATH, separator, FILENAMEPATIENT);
+        File archivo = null;
+        FileReader fr = null;
+        BufferedReader br = null;
+        try {
+            archivo = new File (filepath);
+            fr = new FileReader (archivo);
+            br = new BufferedReader(fr);
+            String linea;
+            while((linea=br.readLine())!=null)
+                System.out.println(linea);
+        }catch (FileNotFoundException e){
+            System.out.println("Error al visualizar el archivo pacientes");
+        }
+        catch(Exception e){
+            e.printStackTrace();
+        }finally{
+
+            try{
+                if( null != fr ){
+                    fr.close();
+                }
+            }catch (Exception e2){
+                e2.printStackTrace();
+            }
+        }
+    }
+
     /******************************CITAS***************************************************************/
 
     public void FileManagerCitas() throws Exception {
