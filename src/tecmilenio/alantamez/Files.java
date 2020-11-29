@@ -11,6 +11,7 @@ public class Files {
     private static final String HOME_PATH = System.getProperty("user.home");
     private static final String FILENAMEDOCTOR = "Doctors.csv";
     private static final String FILENAMEPATIENT = "Pacientes.csv";
+    private static final String FILENAMEDATE = "Citas.csv";
 
     public void FileManager() throws Exception {
         var separator = FileSystems.getDefault().getSeparator();
@@ -95,8 +96,76 @@ public class Files {
             System.out.println("El archivo data fue eliminado.");
         }
     }
+    /******************************CITAS***************************************************************/
 
+    public void FileManagerCitas() throws Exception {
+        var separator = FileSystems.getDefault().getSeparator();
+        var filepath = String.format("%s%s%s", HOME_PATH, separator, FILENAMEDATE);
+        Path fileLocation = Paths.get(filepath);
+        if(!java.nio.file.Files.exists(fileLocation)){
+            File file = new File(String.valueOf(fileLocation));
+            try {
+                file.createNewFile();
+            } catch (IOException e) {
+                System.out.println("Error"+ e);
+            }
+        }
+    }
 
+    public void escribirDatosCitas(int idDoctor, String Fecha, String Hora, String Motivo){
+        var separator = FileSystems.getDefault().getSeparator();
+        var filepath = String.format("%s%s%s", HOME_PATH, separator, FILENAMEDATE);
+        Path fileLocation = Paths.get(filepath);
+        try{
+            FileWriter writeDoctor = new FileWriter(filepath, true);
+            writeDoctor.write("Id: "+idDoctor+" , "+"Fecha: "+ Fecha+" , "+"Hora: "+ Hora+ " , "+"Motivo: "+ Motivo);
+            writeDoctor.write("\r\n");
+            writeDoctor.close();
+        }catch (Exception e){
+            System.out.println("Error al escribir "+ e);
+        }
+    }
 
+    public void eliminarCitas(){
+        var separator = FileSystems.getDefault().getSeparator();
+        var filepath = String.format("%s%s%s", HOME_PATH, separator, FILENAMEDATE);
+        File fichero = new File(filepath);
+        if (!fichero.exists()) {
+            System.out.println("El archivo data no existe.");
+        } else {
+            fichero.delete();
+            System.out.println("El archivo data fue eliminado.");
+        }
+    }
+
+    public void verArchivoCitas(){
+        var separator = FileSystems.getDefault().getSeparator();
+        var filepath = String.format("%s%s%s", HOME_PATH, separator, FILENAMEDATE);
+        File archivo = null;
+        FileReader fr = null;
+        BufferedReader br = null;
+
+        try {
+            archivo = new File (filepath);
+            fr = new FileReader (archivo);
+            br = new BufferedReader(fr);
+
+            String linea;
+            while((linea=br.readLine())!=null)
+                System.out.println(linea);
+        }
+        catch(Exception e){
+            e.printStackTrace();
+        }finally{
+
+            try{
+                if( null != fr ){
+                    fr.close();
+                }
+            }catch (Exception e2){
+                e2.printStackTrace();
+            }
+        }
+    }
 
 }
